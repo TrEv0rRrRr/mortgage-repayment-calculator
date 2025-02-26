@@ -3,7 +3,7 @@ import WithData from "./WithData";
 import WithoutData from "./WithoutData";
 
 interface Props {
-  data: FormInput;
+  data: FormInput | null;
 }
 
 const Header = ({ data }: Props) => {
