@@ -32,8 +32,8 @@ export const getSpanStyles = ({ error, position }: Props): SpanStyles => {
       : "right-0 rounded-tr rounded-br border-l-0";
 
   const spanStylesIfError = error
-    ? "bg-Red border-Red group-focus-within:bg-Red group-focus-within:border-Red group-focus-within:text-white group-hover:bg-Red group-hover:border-Red group-hover:text-white md:top-[2.41rem] xl:top-[2.19rem]"
-    : "group-focus-within:bg-Lime group-focus-within:border-Lime group-hover:bg-Lime group-hover:border-Lime md:top-[2.41rem] xl:top-[2.1rem]";
+    ? "bg-Red border-Red group-focus-within:bg-Red group-focus-within:border-Red group-focus-within:text-white group-hover:bg-Red group-hover:border-Red group-hover:text-white md:top-[2.41rem] xl:top-[2.19rem] 2xl:top-[2.18rem]"
+    : "group-focus-within:bg-Lime group-focus-within:border-Lime group-hover:bg-Lime group-hover:border-Lime md:top-[2.41rem] xl:top-[2.1rem] 2xl:top-[2.15rem]";
 
   return {
     positionSpanStyle,
