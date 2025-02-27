@@ -6,10 +6,10 @@ type Props = {
   onSubmit: (data: FormInput) => void;
 };
 
-type ResetProp = (() => void) | null;
+type Reset = (() => void) | null;
 
 const Main = ({ onSubmit }: Props) => {
-  const [resetForm, setResetForm] = useState<ResetProp>(null);
+  const [resetForm, setResetForm] = useState<Reset>(null);
 
   return (
     <main className="flex flex-col gap-5 bg-white p-8 xl:h-full xl:w-1/2 xl:gap-10 xl:p-10 transition-all duration-300">
