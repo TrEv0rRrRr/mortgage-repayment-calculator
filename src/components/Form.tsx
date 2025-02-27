@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { FormInput } from "../types/FormInput";
 import Input from "./Input";
@@ -6,20 +7,25 @@ import CalculatorIcon from "/icon-calculator.svg";
 
 interface Props {
   onSubmit: (data: FormInput) => void;
+  setReset: (reset: () => void) => void;
 }
 
-const Form = ({ onSubmit }: Props) => {
+const Form = ({ onSubmit, setReset }: Props) => {
   const {
     register,
     formState: { errors },
     handleSubmit,
     watch,
     setValue,
+    reset,
   } = useForm<FormInput>({
     mode: "onBlur",
   });
 
   const selectedValue = watch("mortgageType");
+  useEffect(() => {
+    setReset(() => reset);
+  }, [reset, setReset]);
 
   return (
     <form
